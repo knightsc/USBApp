@@ -1,0 +1,33 @@
+//
+//  MyUserUSBInterfaceDriver.iig
+//  MyUserUSBInterfaceDriver
+//
+//  Created by Scott Knight on 6/13/19.
+//  Copyright © 2019 Scott Knight. All rights reserved.
+//
+
+#ifndef MyUserUSBInterfaceDriver_h
+#define MyUserUSBInterfaceDriver_h
+
+#include <Availability.h>
+#include <DriverKit/IOService.iig>
+
+class OSAction;
+
+class MyUserUSBInterfaceDriver: public IOService
+{
+public:
+    virtual bool init() override;
+    virtual kern_return_t Start(IOService *provider) override;
+    virtual kern_return_t Stop(IOService *provider) override;
+    virtual void free() override;
+    
+protected:
+    virtual void ReadComplete(OSAction *action,
+                              IOReturn  status,
+                              uint32_t  actualByteCount,
+                              uint64_t  completionTimestamp)
+                              TYPE(IOUSBHostPipe::CompleteAsyncIO);
+};
+
+#endif /* MyUserUSBInterfaceDriver_h */

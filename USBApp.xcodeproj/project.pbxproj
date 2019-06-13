@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F55575622B2C4D900139F6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55575522B2C4D900139F6B /* AppDelegate.swift */; };
+		6F55575822B2C4D900139F6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55575722B2C4D900139F6B /* ContentView.swift */; };
+		6F55575A22B2C4DB00139F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F55575922B2C4DB00139F6B /* Assets.xcassets */; };
+		6F55575D22B2C4DB00139F6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F55575C22B2C4DB00139F6B /* Preview Assets.xcassets */; };
+		6F55576022B2C4DB00139F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F55575E22B2C4DB00139F6B /* Main.storyboard */; };
+		6F55577022B2C52C00139F6B /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55576F22B2C52C00139F6B /* DriverKit.framework */; };
+		6F55577322B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */; };
+		6F55577522B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */; };
+		6F55577A22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6F55578022B2C54300139F6B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55577F22B2C54300139F6B /* USBDriverKit.framework */; };
+		6F55578522B2D42900139F6B /* ExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55578422B2D42900139F6B /* ExtensionManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F55577822B2C52C00139F6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F55574A22B2C4D900139F6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F55576C22B2C52C00139F6B;
+			remoteInfo = MyUserUSBInterfaceDriver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F55577E22B2C52C00139F6B /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				6F55577A22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F55578222B2C54300139F6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6F55575222B2C4D900139F6B /* USBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F55575522B2C4D900139F6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F55575722B2C4D900139F6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F55575922B2C4DB00139F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F55575C22B2C4DB00139F6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F55575F22B2C4DB00139F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F55576122B2C4DB00139F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F55576222B2C4DB00139F6B /* USBApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = USBApp.entitlements; sourceTree = "<group>"; };
+		6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = sc.knight.MyUserUSBInterfaceDriver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F55576F22B2C52C00139F6B /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyUserUSBInterfaceDriver.cpp; sourceTree = "<group>"; };
+		6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = MyUserUSBInterfaceDriver.iig; sourceTree = "<group>"; };
+		6F55577622B2C52C00139F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F55577722B2C52C00139F6B /* MyUserUSBInterfaceDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyUserUSBInterfaceDriver.entitlements; sourceTree = "<group>"; };
+		6F55577F22B2C54300139F6B /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/DriverKit19.0.sdk/System/DriverKit/System/Library/Frameworks/USBDriverKit.framework; sourceTree = DEVELOPER_DIR; };
+		6F55578422B2D42900139F6B /* ExtensionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F55574F22B2C4D900139F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F55576A22B2C52C00139F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F55578022B2C54300139F6B /* USBDriverKit.framework in Frameworks */,
+				6F55577022B2C52C00139F6B /* DriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F55574922B2C4D900139F6B = {
+			isa = PBXGroup;
+			children = (
+				6F55575422B2C4D900139F6B /* USBApp */,
+				6F55577122B2C52C00139F6B /* MyUserUSBInterfaceDriver */,
+				6F55576E22B2C52C00139F6B /* Frameworks */,
+				6F55575322B2C4D900139F6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F55575322B2C4D900139F6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F55575222B2C4D900139F6B /* USBApp.app */,
+				6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F55575422B2C4D900139F6B /* USBApp */ = {
+			isa = PBXGroup;
+			children = (
+				6F55575522B2C4D900139F6B /* AppDelegate.swift */,
+				6F55575722B2C4D900139F6B /* ContentView.swift */,
+				6F55578422B2D42900139F6B /* ExtensionManager.swift */,
+				6F55575922B2C4DB00139F6B /* Assets.xcassets */,
+				6F55575E22B2C4DB00139F6B /* Main.storyboard */,
+				6F55576122B2C4DB00139F6B /* Info.plist */,
+				6F55576222B2C4DB00139F6B /* USBApp.entitlements */,
+				6F55575B22B2C4DB00139F6B /* Preview Content */,
+			);
+			path = USBApp;
+			sourceTree = "<group>";
+		};
+		6F55575B22B2C4DB00139F6B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6F55575C22B2C4DB00139F6B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F55576E22B2C52C00139F6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F55577F22B2C54300139F6B /* USBDriverKit.framework */,
+				6F55576F22B2C52C00139F6B /* DriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F55577122B2C52C00139F6B /* MyUserUSBInterfaceDriver */ = {
+			isa = PBXGroup;
+			children = (
+				6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */,
+				6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */,
+				6F55577622B2C52C00139F6B /* Info.plist */,
+				6F55577722B2C52C00139F6B /* MyUserUSBInterfaceDriver.entitlements */,
+			);
+			path = MyUserUSBInterfaceDriver;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6F55576822B2C52C00139F6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6F55575122B2C4D900139F6B /* USBApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F55576522B2C4DB00139F6B /* Build configuration list for PBXNativeTarget "USBApp" */;
+			buildPhases = (
+				6F55574E22B2C4D900139F6B /* Sources */,
+				6F55574F22B2C4D900139F6B /* Frameworks */,
+				6F55575022B2C4D900139F6B /* Resources */,
+				6F55577E22B2C52C00139F6B /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F55577922B2C52C00139F6B /* PBXTargetDependency */,
+			);
+			name = USBApp;
+			productName = USBApp;
+			productReference = 6F55575222B2C4D900139F6B /* USBApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F55576C22B2C52C00139F6B /* MyUserUSBInterfaceDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F55577B22B2C52C00139F6B /* Build configuration list for PBXNativeTarget "MyUserUSBInterfaceDriver" */;
+			buildPhases = (
+				6F55576822B2C52C00139F6B /* Headers */,
+				6F55576922B2C52C00139F6B /* Sources */,
+				6F55576A22B2C52C00139F6B /* Frameworks */,
+				6F55576B22B2C52C00139F6B /* Resources */,
+				6F55578222B2C54300139F6B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyUserUSBInterfaceDriver;
+			productName = MyUserUSBInterfaceDriver;
+			productReference = 6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F55574A22B2C4D900139F6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Scott Knight";
+				TargetAttributes = {
+					6F55575122B2C4D900139F6B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					6F55576C22B2C52C00139F6B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 6F55574D22B2C4D900139F6B /* Build configuration list for PBXProject "USBApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F55574922B2C4D900139F6B;
+			productRefGroup = 6F55575322B2C4D900139F6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F55575122B2C4D900139F6B /* USBApp */,
+				6F55576C22B2C52C00139F6B /* MyUserUSBInterfaceDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F55575022B2C4D900139F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F55576022B2C4DB00139F6B /* Main.storyboard in Resources */,
+				6F55575D22B2C4DB00139F6B /* Preview Assets.xcassets in Resources */,
+				6F55575A22B2C4DB00139F6B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F55576B22B2C52C00139F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F55574E22B2C4D900139F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F55575822B2C4D900139F6B /* ContentView.swift in Sources */,
+				6F55575622B2C4D900139F6B /* AppDelegate.swift in Sources */,
+				6F55578522B2D42900139F6B /* ExtensionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F55576922B2C52C00139F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F55577322B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp in Sources */,
+				6F55577522B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F55577922B2C52C00139F6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F55576C22B2C52C00139F6B /* MyUserUSBInterfaceDriver */;
+			targetProxy = 6F55577822B2C52C00139F6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F55575E22B2C4DB00139F6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F55575F22B2C4DB00139F6B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F55576322B2C4DB00139F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F55576422B2C4DB00139F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6F55576622B2C4DB00139F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = USBApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.USBApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6F55576722B2C4DB00139F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = USBApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.USBApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6F55577C22B2C52C00139F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = MyUserUSBInterfaceDriver/MyUserUSBInterfaceDriver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.MyUserUSBInterfaceDriver;
+				PRODUCT_NAME = "$(inherited)";
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6F55577D22B2C52C00139F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = MyUserUSBInterfaceDriver/MyUserUSBInterfaceDriver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.MyUserUSBInterfaceDriver;
+				PRODUCT_NAME = "$(inherited)";
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F55574D22B2C4D900139F6B /* Build configuration list for PBXProject "USBApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F55576322B2C4DB00139F6B /* Debug */,
+				6F55576422B2C4DB00139F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F55576522B2C4DB00139F6B /* Build configuration list for PBXNativeTarget "USBApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F55576622B2C4DB00139F6B /* Debug */,
+				6F55576722B2C4DB00139F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F55577B22B2C52C00139F6B /* Build configuration list for PBXNativeTarget "MyUserUSBInterfaceDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F55577C22B2C52C00139F6B /* Debug */,
+				6F55577D22B2C52C00139F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F55574A22B2C4D900139F6B /* Project object */;
+}
