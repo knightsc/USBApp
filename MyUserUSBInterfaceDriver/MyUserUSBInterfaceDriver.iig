@@ -9,7 +9,6 @@
 #ifndef MyUserUSBInterfaceDriver_h
 #define MyUserUSBInterfaceDriver_h
 
-#include <Availability.h>
 #include <DriverKit/IOService.iig>
 
 class OSAction;
@@ -26,8 +25,7 @@ protected:
     virtual void ReadComplete(OSAction *action,
                               IOReturn  status,
                               uint32_t  actualByteCount,
-                              uint64_t  completionTimestamp)
-                              TYPE(IOUSBHostPipe::CompleteAsyncIO);
+                              uint64_t  completionTimestamp);
 };
 
 #endif /* MyUserUSBInterfaceDriver_h */

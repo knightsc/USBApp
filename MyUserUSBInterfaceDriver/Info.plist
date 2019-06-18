@@ -43,5 +43,7 @@
             <integer>0x5530</integer>
 		</dict>
 	</dict>
+    <key>OSBundleUsageDescription</key>
+    <string>Example user space USB driver</string>
 </dict>
 </plist>
